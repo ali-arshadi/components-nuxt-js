@@ -7,5 +7,6 @@ import BaseInput from '@/components/base/BaseInput.vue';
   <div>
     <BaseButton variant="ghost" size="lg"> this is a button </BaseButton>
     <BaseInput type="email" placeholder="you@example.com" />
+    <BaseTextarea rows="6" size="lg" placeholder="Write something brilliant…" />
   </div>
 </template>
