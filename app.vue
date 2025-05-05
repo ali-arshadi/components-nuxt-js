@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import BaseButton from '@/components/base/BaseButton.vue';
 import BaseInput from '@/components/base/BaseInput.vue';
+
+const countries = [
+  { value: 'de', label: 'Germany' },
+  { value: 'us', label: 'United States' },
+];
 </script>
 
 <template>
@@ -8,5 +13,6 @@ import BaseInput from '@/components/base/BaseInput.vue';
     <BaseButton variant="ghost" size="lg"> this is a button </BaseButton>
     <BaseInput type="email" placeholder="you@example.com" />
     <BaseTextarea rows="6" size="lg" placeholder="Write something brilliant…" />
+    <BaseSelect :options="countries" placeholder="Choose a country" />
   </div>
 </template>
