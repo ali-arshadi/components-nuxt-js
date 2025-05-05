@@ -6,7 +6,23 @@ import BaseSelect from '@/components/base/BaseSelect.vue';
 import BaseCheckbox from '@/components/base/BaseCheckbox.vue';
 import BaseRadio from '@/components/base/BaseRadio.vue';
 import BaseBadge from '@/components/base/BaseBadge.vue';
+import BaseTag from '@/components/base/BaseTag.vue';
 
+import { ref } from 'vue';
+
+type Tag = {
+  id: number; // unique key for v-for
+  label: string; // text shown inside the tag
+  variant?: 'default' | 'success' | 'info' | 'warning' | 'danger';
+};
+
+const tags = ref<Tag[]>([
+  { id: 1, label: 'Vue', variant: 'success' },
+  { id: 2, label: 'Nuxt', variant: 'info' },
+  { id: 3, label: 'JavaScript', variant: 'warning' },
+  { id: 4, label: 'CSS', variant: 'default' },
+  { id: 5, label: 'Tailwind? 🤫', variant: 'danger' },
+]);
 const countries = [
   { value: 'de', label: 'Germany' },
   { value: 'us', label: 'United States' },
@@ -33,5 +49,16 @@ const countries = [
     </BaseRadio>
     <br />
     <BaseBadge variant="info">Draft</BaseBadge>
+    <div class="tag-list">
+      <BaseTag
+        v-for="(tag, i) in tags"
+        :key="tag.id"
+        :variant="tag.variant"
+        removable
+        @remove="tags.splice(i, 1)"
+      >
+        {{ tag.label }}
+      </BaseTag>
+    </div>
   </div>
 </template>
