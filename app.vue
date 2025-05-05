@@ -5,6 +5,7 @@ import BaseTextarea from '@/components/base/BaseTextarea.vue';
 import BaseSelect from '@/components/base/BaseSelect.vue';
 import BaseCheckbox from '@/components/base/BaseCheckbox.vue';
 import BaseRadio from '@/components/base/BaseRadio.vue';
+import BaseBadge from '@/components/base/BaseBadge.vue';
 
 const countries = [
   { value: 'de', label: 'Germany' },
@@ -30,5 +31,7 @@ const countries = [
     >
       {{ size.toUpperCase() }}
     </BaseRadio>
+    <br />
+    <BaseBadge variant="info">Draft</BaseBadge>
   </div>
 </template>
