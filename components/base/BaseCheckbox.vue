@@ -4,7 +4,7 @@ import { ref, watch, onMounted } from 'vue';
 
 const props = defineProps<{
   /** v-model binding */
-  modelValue: boolean;
+  modelValue?: boolean;
   /** optional label text (slot overrides) */
   label?: string;
   disabled?: boolean;
