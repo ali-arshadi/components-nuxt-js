@@ -4,7 +4,7 @@ import { computed } from 'vue';
 
 const props = defineProps<{
   /** v-model value */
-  modelValue: string | null;
+  modelValue?: string | null;
   /** textarea rows attribute */
   rows?: number;
   /** responsive sizing */
