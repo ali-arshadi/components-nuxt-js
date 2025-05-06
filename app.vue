@@ -33,7 +33,11 @@ const countries = [
   <div>
     <BaseButton variant="ghost" size="lg"> this is a button </BaseButton>
     <BaseInput type="email" placeholder="you@example.com" />
-    <BaseTextarea rows="6" size="lg" placeholder="Write something brilliant…" />
+    <BaseTextarea
+      :rows="6"
+      size="lg"
+      placeholder="Write something brilliant…"
+    />
     <BaseSelect :options="countries" placeholder="Choose a country" />
     <BaseCheckbox label="Subscribe to newsletter?" />
     <br />

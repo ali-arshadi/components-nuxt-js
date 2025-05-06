@@ -2,7 +2,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   /** v-model checked value of the radio group */
-  modelValue: string | number | null;
+  modelValue?: string | number | null;
   /** this radio's own value */
   value: string | number;
   /** optional label text (slot overrides) */
