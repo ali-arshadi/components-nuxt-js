@@ -4,7 +4,7 @@ import { computed } from 'vue';
 
 const props = defineProps<{
   /** v-model value */
-  modelValue?: string | number | null;
+  modelValue: string | number | null;
   /** HTML input type, e.g. text, email, password */
   type?: string;
   /** small / medium / large sizing */

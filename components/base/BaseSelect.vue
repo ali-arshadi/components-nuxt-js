@@ -4,7 +4,7 @@ import { computed } from 'vue';
 
 const props = defineProps<{
   /** v-model value */
-  modelValue?: string | number | null;
+  modelValue: string | number | null;
   /** array of { value, label } options */
   options: Array<{ value: string | number; label: string }>;
   /** small / medium / large */
